@@ -14,9 +14,10 @@ include("inc/header.php"); ?>
 
 				<ul class="items">
 					<?php
-					foreach($catalog as $id => $item)
+					$random = array_rand($catalog,4);
+					foreach($random as $id)
 					{
-						echo get_item_html($id,$item);
+						echo get_item_html($id,$catalog[$id]);
 					}
 					?>
 				</ul>
